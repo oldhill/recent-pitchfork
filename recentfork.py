@@ -11,7 +11,8 @@ import modules.bestnewmusic as bnm
 def main():
 
   # Get historical data from disc
-  history_file = open('bnm_log.txt', 'r')
+  history_file = open_or_create('bnm_log.txt')
+  
   full_history_log = history_file.read()
   latest_historical_set = full_history_log.split('\n')[0] #first line
   history_file.close()
@@ -27,16 +28,22 @@ def main():
 
   # If there's a new set, write new history file
   if current_set != latest_historical_set:
-
     new_log = current_set+'\n'+full_history_log
     updated_history_file = open('bnm_log.txt', 'w')
     updated_history_file.write(new_log)
     updated_history_file.close()
     print 'file updated!'
-
   else:
-
     print 'no updates'
+
+def open_or_create(filename):
+  try:  
+    file = open(filename, 'r') # If the file exists open it
+  except IOError:
+    file = open(filename, 'w') # If the file does not exist create it 
+    file.close     
+    file = open(filename, "r") # Now open the file
+  return file # return the file
 
 if __name__ == '__main__':
   main()
