@@ -42,8 +42,8 @@ def open_or_create(filename):
   except IOError:
     file = open(filename, 'w') # If the file does not exist create it 
     file.close     
-    file = open(filename, "r") # Now open the file
-  return file # return the file
+    file = open(filename, 'r') # Now open the file
+  return file 
 
 if __name__ == '__main__':
   main()
