@@ -6,7 +6,7 @@
 # Requires pitchfork-bnm module at
 # https://github.com/oldhill/pitchfork-bnm
 
-import modules.bestnewmusic as bnm
+import pitchfork_bnm.bestnewmusic as bnm
 
 def main():
 

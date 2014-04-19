@@ -1,0 +1,3 @@
+[submodule "pitchfork_bnm"]
+	path = pitchfork_bnm
+	url = git://github.com/oldhill/pitchfork-bnm.git
