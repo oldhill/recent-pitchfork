@@ -9,7 +9,7 @@ Sample project at [oldhillcode.com/music.html](http://oldhillcode.com/music.html
 
 Not written by or associated with Pitchfork.com
 
-Requires
+submodule
 --------
 
 pitchfork-bnm module available [here](https://github.com/oldhill/pitchfork-bnm)
